@@ -1,0 +1,6 @@
+Repita
+  Obtenha idade
+Até idade > 25
+
+Obtenha nome
+Apresente nome
