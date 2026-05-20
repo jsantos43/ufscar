@@ -85,6 +85,22 @@ int main(void) {
 
   printf("%d e %d\n", vet[0], vet[TAMANHO - 1]);
 
+  // Trocar todos os dados do vetor para que a ordem seja invertida
+  for (int index = 0; index < TAMANHO / 2; index++) {
+    int aux = vet[index];
+    vet[index] = vet[TAMANHO -1 - index];
+    vet[TAMANHO -1 - index] = aux;
+    printf("%d ", index);
+  }
+
+  printf("\n");
+
+  for (int index = 0; index < TAMANHO; index++) {
+    printf("%d ", vet[index]);
+  }
+
+  printf("\n");
+
 
   return 0;
 }

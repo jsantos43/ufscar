@@ -1,13 +1,19 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
-struct MATRIZ_TABULEIRO {
-  int i;
-  int j;
-};
+
+void clear_screen(void) {
+  #ifdef _WIN32
+      system("cls");
+  #else
+      system("clear");
+  #endif
+}
 
 void printar_tabuleiro(char tabuleiro[3][3]) {
-  printf("\n\n\n");
+  
+  clear_screen();
   printf("====================\n");
   printf("       Velha        \n");
   printf("====================\n\n");
@@ -25,10 +31,9 @@ void printar_tabuleiro(char tabuleiro[3][3]) {
   printf("\n");
 }
 
-struct MATRIZ_TABULEIRO pedir_jogada(int jogador, char tabuleiro[3][3]) {
+void pedir_jogada(int jogador, char tabuleiro[][3]) {
   char entrada;
   bool jogada_invalida = true;
-  struct MATRIZ_TABULEIRO saida;
 
   printar_tabuleiro(tabuleiro);
   
@@ -40,8 +45,7 @@ struct MATRIZ_TABULEIRO pedir_jogada(int jogador, char tabuleiro[3][3]) {
       for (int j = 0; j < 3; j++) {
         if (entrada == tabuleiro[i][j] && entrada != 'X' && entrada != 'O') {
           jogada_invalida = false;
-          saida.i = i;
-          saida.j = j;
+          tabuleiro[i][j] = jogador == 1 ? 'X' : 'O';
         }
       }
     }
@@ -52,8 +56,6 @@ struct MATRIZ_TABULEIRO pedir_jogada(int jogador, char tabuleiro[3][3]) {
       printf("POSICAO %c INVÁLIDA!\n", entrada);
     }  
   } while (jogada_invalida);
-
-  return saida;
 }
 
 char verificar_ganhador(char tabuleiro[3][3]) {
@@ -93,33 +95,24 @@ int main(void) {
     {'7', '8', '9'},
   };
 
-  int index = 0;
-  bool jogando = true;
+  int total_jogadas = 0;
   char ganhador = '-';
 
-
   do {
-    // Pedir entrada do jogador 1
-    struct MATRIZ_TABULEIRO jogadaX;
-    jogadaX = pedir_jogada(1, tabuleiro);
-    tabuleiro[jogadaX.i][jogadaX.j] = 'X';
-
+    // Pedir jogada do jogador 1
+    pedir_jogada(1, tabuleiro);
     ganhador = verificar_ganhador(tabuleiro);
-    if (ganhador != '-') jogando = false;
+    total_jogadas++;
 
-    if (jogando) {
-      // Pedir entrada do jogador 2
-      struct MATRIZ_TABULEIRO jogadaO;
-      jogadaO = pedir_jogada(2, tabuleiro);
-      tabuleiro[jogadaO.i][jogadaO.j] = 'O';
-
+    if (ganhador == '-' && total_jogadas < 9) {
+      // Pedir jogada do jogador 2
+      pedir_jogada(2, tabuleiro);
       ganhador = verificar_ganhador(tabuleiro);
-      if (ganhador != '-') jogando = false;
+      total_jogadas++;
     }
-  } while (jogando);
+  } while (ganhador == '-' && total_jogadas < 9);
 
   printar_tabuleiro(tabuleiro);
-
   printf("O ganhador foi %c!\n", ganhador);
 
   return 0;
