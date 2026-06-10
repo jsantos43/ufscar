@@ -32,5 +32,8 @@ int main(void) {
     fprintf(saida, "\nErro!");
   }
 
+  fclose(dados);
+  fclose(saida);
+
   return 0;
 }
