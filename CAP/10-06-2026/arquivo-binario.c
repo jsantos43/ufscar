@@ -9,6 +9,7 @@ int main(void) {
 
   double d = -2.56;
 
+  // endereço de mem. tamanho de bytes, quantidade, fluxo do arquivo
   fwrite(&d, sizeof d, 1, arquivo);
 
   d = 49.3428;
