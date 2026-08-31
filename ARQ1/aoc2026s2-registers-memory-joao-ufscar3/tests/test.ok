@@ -1,0 +1,19 @@
+VCD info: dumpfile test.vcd opened for output.
+Time: 0 | Address: 0 | BM Data: badc0ffe | SM Data: xxxxxxxx
+Time: 5 | Address: 0 | BM Data: c0000001 | SM Data: badc0ffe
+Time: 15 | Address: 0 | BM Data: c0000001 | SM Data: c0000001
+Time: 20 | Address: 1 | BM Data: cafebabe | SM Data: xxxxxxxx
+Time: 25 | Address: 1 | BM Data: c0000001 | SM Data: cafebabe
+Time: 30 | Address: 2 | BM Data: decafbad | SM Data: xxxxxxxx
+Time: 35 | Address: 2 | BM Data: c0000001 | SM Data: c0000001
+Time: 40 | Address: 3 | BM Data: c0ded00d | SM Data: xxxxxxxx
+Time: 45 | Address: 3 | BM Data: c0000001 | SM Data: c0ded00d
+Time: 50 | Address: 4 | BM Data: 000ff1ce | SM Data: xxxxxxxx
+Time: 55 | Address: 4 | BM Data: c0000001 | SM Data: c0000001
+Time: 60 | Address: 5 | BM Data: 8badf00d | SM Data: xxxxxxxx
+Time: 65 | Address: 5 | BM Data: c0000001 | SM Data: 8badf00d
+Time: 70 | Address: 6 | BM Data: b105f00d | SM Data: xxxxxxxx
+Time: 75 | Address: 6 | BM Data: c0000001 | SM Data: c0000001
+Time: 80 | Address: 7 | BM Data: 0d15ea5e | SM Data: xxxxxxxx
+Time: 85 | Address: 7 | BM Data: c0000001 | SM Data: 0d15ea5e
+Time: 90 | Address: 0 | BM Data: c0000001 | SM Data: c0000001
