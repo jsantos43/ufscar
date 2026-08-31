@@ -1,0 +1,6 @@
+tests/*.out
+tests/tb*
+*.gabarito
+*.elf
+*.o
+*.out

@@ -1,0 +1,12 @@
+schema: "classroom50/repo-config/v1"
+classroom: "aoc2026s2"
+assignment: "hello-asm"
+owner:
+  username: "joao-ufscar3"
+  id: 319255699
+  accepted_at: "2026-08-26T18:34:47Z"
+source:
+  owner: "DC-UFSCar"
+  owner_id: 11891488
+  repo: "getting-started-asm"
+  branch: "main"
