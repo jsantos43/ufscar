@@ -1,0 +1,19 @@
+VCD info: dumpfile regfile_tb.vcd opened for output.
+Time:  0, ra1: x, ra2: x, wa3: x, we3:0, wd3: xxxxxxxx, rd2: xxxxxxxx, rd1: xxxxxxxx
+Time: 10, ra1: 0, ra2: 1, wa3: 1, we3:1, wd3: badc0ffe, rd2: xxxxxxxx, rd1: 00000000
+Time: 15, ra1: 0, ra2: 1, wa3: 1, we3:1, wd3: badc0ffe, rd2: badc0ffe, rd1: 00000000
+Time: 20, ra1: 1, ra2: 2, wa3: 2, we3:1, wd3: cafebabe, rd2: xxxxxxxx, rd1: badc0ffe
+Time: 25, ra1: 1, ra2: 2, wa3: 2, we3:1, wd3: cafebabe, rd2: cafebabe, rd1: badc0ffe
+Time: 30, ra1: 2, ra2: 3, wa3: 3, we3:1, wd3: decafbad, rd2: xxxxxxxx, rd1: cafebabe
+Time: 35, ra1: 2, ra2: 3, wa3: 3, we3:1, wd3: decafbad, rd2: decafbad, rd1: cafebabe
+Time: 40, ra1: 3, ra2: 4, wa3: 4, we3:1, wd3: c0ded00d, rd2: xxxxxxxx, rd1: decafbad
+Time: 45, ra1: 3, ra2: 4, wa3: 4, we3:1, wd3: c0ded00d, rd2: c0ded00d, rd1: decafbad
+Time: 50, ra1: 4, ra2: 5, wa3: 5, we3:1, wd3: 000ff1ce, rd2: xxxxxxxx, rd1: c0ded00d
+Time: 55, ra1: 4, ra2: 5, wa3: 5, we3:1, wd3: 000ff1ce, rd2: 000ff1ce, rd1: c0ded00d
+Time: 60, ra1: 5, ra2: 6, wa3: 6, we3:1, wd3: 8badf00d, rd2: xxxxxxxx, rd1: 000ff1ce
+Time: 65, ra1: 5, ra2: 6, wa3: 6, we3:1, wd3: 8badf00d, rd2: 8badf00d, rd1: 000ff1ce
+Time: 70, ra1: 6, ra2: 7, wa3: 7, we3:1, wd3: b105f00d, rd2: xxxxxxxx, rd1: 8badf00d
+Time: 75, ra1: 6, ra2: 7, wa3: 7, we3:1, wd3: b105f00d, rd2: b105f00d, rd1: 8badf00d
+Time: 80, ra1: 7, ra2: 8, wa3: 8, we3:1, wd3: 0d15ea5e, rd2: xxxxxxxx, rd1: b105f00d
+Time: 85, ra1: 7, ra2: 8, wa3: 8, we3:1, wd3: 0d15ea5e, rd2: 0d15ea5e, rd1: b105f00d
+Time: 90, ra1: 8, ra2: 9, wa3: 9, we3:0, wd3: xxxxxxxx, rd2: xxxxxxxx, rd1: 0d15ea5e

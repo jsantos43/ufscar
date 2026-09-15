@@ -1,0 +1,12 @@
+schema: "classroom50/repo-config/v1"
+classroom: "aoc2026s2"
+assignment: "rf-test-bench"
+owner:
+  username: "joao-ufscar3"
+  id: 319255699
+  accepted_at: "2026-09-03T13:46:17Z"
+source:
+  owner: "DC-UFSCar"
+  owner_id: 11891488
+  repo: "rf-test-bench"
+  branch: "main"

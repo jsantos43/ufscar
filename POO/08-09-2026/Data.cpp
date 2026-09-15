@@ -1,9 +1,13 @@
 #include "Data.h"
 
 Data::Data(int d, int m, int a) {
-  ano = set_ano(a) ? ano : 2000;  
-  mes = set_mes(m) ? mes : 1;  
-  dia = set_dia(d) ? dia : 1;  
+  ano = 2000;
+  mes = 1;
+  dia = 1;
+
+  set_ano(a);
+  set_mes(m);
+  set_dia(d);
 }
 
 Data::Data() {
@@ -14,7 +18,6 @@ Data::Data() {
 
 Data::~Data() {
   std::cout << "Data apagada!\n";
-  delete this;
 }
 
 int Data::get_dia() {
@@ -32,7 +35,9 @@ int Data::get_ano() {
 bool Data::set_dia(int d) {
   if (!this->valida_data(d, mes, ano)) return false;
 
-  dia = d;
+  this->dia = d;
+
+  return true;
 }
 
 bool Data::set_mes(int m) {
@@ -57,6 +62,8 @@ bool Data::set_data(int d, int m, int a) {
   dia = d;
   mes = m;
   ano = a;
+
+  return true;
 }
 
 bool Data::valida_data(int d, int m, int a) {
@@ -89,6 +96,8 @@ bool Data::valida_data(int d, int m, int a) {
       }
     }
   }
+
+  return true;
 }
 
 void Data::mostra_data() {
