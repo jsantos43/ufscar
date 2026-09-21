@@ -1,0 +1,12 @@
+schema: "classroom50/repo-config/v1"
+classroom: "aoc2026s2"
+assignment: "strings-asm"
+owner:
+  username: "joao-ufscar3"
+  id: 319255699
+  accepted_at: "2026-09-13T20:13:42Z"
+source:
+  owner: "DC-UFSCar"
+  owner_id: 11891488
+  repo: "string-asm"
+  branch: "main"
