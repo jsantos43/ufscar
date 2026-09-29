@@ -1,0 +1,22 @@
+VCD info: dumpfile alu_tb.vcd opened for output.
+Time:   0, instr: 01c38333, op1: cafe0000, op2: 0000babe, res: cafebabe
+Time:  10, instr: 40730333, op1: cafe0000, op2: 0000babe, res: cafd4542
+Time:  20, instr: 40730333, op1: cafebabe, op2: cafe0000, res: 0000babe
+Time:  30, instr: 00338313, op1: cafebabe, op2: 00000003, res: cafebac1
+Time:  40, instr: 00338313, op1: cafe0000, op2: 00000003, res: cafe0003
+Time:  50, instr: 01c3e333, op1: cafe0000, op2: 00400000, res: cafe0000
+Time:  60, instr: 01c3e333, op1: cafe0000, op2: 0000babe, res: cafebabe
+Time:  70, instr: 0033e313, op1: cafe0000, op2: 00000003, res: cafe0003
+Time:  80, instr: 01c3c333, op1: cafe0000, op2: 00400000, res: cabe0000
+Time:  90, instr: 01c3c333, op1: cafe0000, op2: 0000babe, res: cafebabe
+Time: 100, instr: 0033c313, op1: cafe0000, op2: 00000003, res: cafe0003
+Time: 110, instr: 01d39333, op1: cafe0000, op2: 00400000, res: cafe0000
+Time: 120, instr: 01d39333, op1: cafe0000, op2: 00000004, res: afe00000
+Time: 130, instr: 00239313, op1: cafe0000, op2: 00000002, res: 2bf80000
+Time: 140, instr: 01d3d333, op1: cafe0000, op2: 00001800, res: cafe0000
+Time: 150, instr: 01d3d333, op1: cafe0000, op2: 00000004, res: 0cafe000
+Time: 160, instr: 0083d313, op1: cafe0000, op2: 00000008, res: 00cafe00
+Time: 170, instr: 41d3d333, op1: cafe0000, op2: 00000000, res: cafe0000
+Time: 180, instr: 41d3d333, op1: cafe0000, op2: 00000004, res: fcafe000
+Time: 190, instr: 4083d313, op1: cafe0000, op2: 00000408, res: ffcafe00
+Time: 200, instr: 00100073, op1: cafe0000, op2: 00000001, res: cafe0001
