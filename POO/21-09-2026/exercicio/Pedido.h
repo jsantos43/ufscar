@@ -12,17 +12,21 @@ class Pedido {
     std::string *itens;
 
     static int total_pedidos;
+    static int total_itens;
+    static int prox_id;
   public:
     Pedido(std::string, int);
+    Pedido(const Pedido&);
     ~Pedido();
     std::string get_nome() const;
     int get_quantidade() const;
     int get_id() const;
     bool get_pedido(int, std::string&) const;
     bool add_pedido(int, std::string);
-    void imprimir_itens();
+    void imprimir() const;
 
-    static int get_total();
+    static int get_total_pedidos();
+    static int get_total_itens();
 };
 
 #endif

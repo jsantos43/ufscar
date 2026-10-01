@@ -1,0 +1,17 @@
+VCD info: dumpfile wave.vcd opened for output.
+Time:  10, instr: 403100b3, op1: 00000000, op2: 00000000, res: 00000000, valid: 1, branch: 0, target: 00000000
+Time:  20, instr: 403100b3, op1: 00000001, op2: 00000001, res: 00000000, valid: 1, branch: 0, target: 00000000
+Time:  30, instr: 403100b3, op1: 00000000, op2: 00000001, res: ffffffff, valid: 1, branch: 0, target: 00000000
+Time:  40, instr: 403100b3, op1: 00000001, op2: 00000000, res: 00000001, valid: 1, branch: 0, target: 00000000
+Time:  50, instr: 403100b3, op1: cafe0000, op2: 0000babe, res: cafd4542, valid: 1, branch: 0, target: 00000000
+Time:  60, instr: 403100b3, op1: ffffffff, op2: 00000001, res: fffffffe, valid: 1, branch: 0, target: 00000000
+Time:  70, instr: 403100b3, op1: 7fffffff, op2: 00000001, res: 7ffffffe, valid: 1, branch: 0, target: 00000000
+Time:  80, instr: 403100b3, op1: 80000000, op2: 00000001, res: 7fffffff, valid: 1, branch: 0, target: 00000000
+Time:  90, instr: 403100b3, op1: 80000000, op2: ffffffff, res: 80000001, valid: 1, branch: 0, target: 00000000
+Time: 100, instr: 403100b3, op1: 7fffffff, op2: ffffffff, res: 80000000, valid: 1, branch: 0, target: 00000000
+Time: 110, instr: 403100b3, op1: ffffffff, op2: 80000000, res: 7fffffff, valid: 1, branch: 0, target: 00000000
+Time: 120, instr: 403100b3, op1: 80000000, op2: 7fffffff, res: 00000001, valid: 1, branch: 0, target: 00000000
+Time: 130, instr: 403100b3, op1: 80000000, op2: 80000000, res: 00000000, valid: 1, branch: 0, target: 00000000
+Time: 140, instr: 403100b3, op1: ffffffff, op2: ffffffff, res: 00000000, valid: 1, branch: 0, target: 00000000
+Time: 150, instr: 403100b3, op1: aaaaaaaa, op2: 55555555, res: 55555555, valid: 1, branch: 0, target: 00000000
+Time: 160, instr: 403100b3, op1: 12345678, op2: 87654321, res: 8acf1357, valid: 1, branch: 0, target: 00000000

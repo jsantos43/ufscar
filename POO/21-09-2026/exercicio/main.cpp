@@ -16,8 +16,16 @@ int main(void) {
   Pedido p3("Carlos", 1);
   p3.add_pedido(0, "Video-Game");
 
-  p1.imprimir_itens();
-  p2.imprimir_itens();
-  p3.imprimir_itens();
+  p1.imprimir();
+  p2.imprimir();
+  p3.imprimir();
+
+  Pedido p1Copy(p1);
+  p1Copy.add_pedido(0, "Carro");
+  p1Copy.add_pedido(2, "PitBull");
+  p1Copy.add_pedido(1, "Jatinho");
+  p1.imprimir();
+  p1Copy.imprimir();
+
   return 0;
 }
