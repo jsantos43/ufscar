@@ -1,0 +1,43 @@
+
+riscv.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	10400413          	li	s0,260
+   4:	ffc42283          	lw	t0,-4(s0)
+   8:	00042303          	lw	t1,0(s0)
+
+0000000c <loop>:
+   c:	005303b3          	add	t2,t1,t0
+  10:	006002b3          	add	t0,zero,t1
+  14:	00700333          	add	t1,zero,t2
+  18:	00440413          	addi	s0,s0,4
+  1c:	00742023          	sw	t2,0(s0)
+  20:	fedff06f          	j	c <loop>
+
+Disassembly of section .data:
+
+00000100 <a>:
+ 100:	0000                	.insn	2, 0x
+	...
+
+00000104 <b>:
+ 104:	0001                	.insn	2, 0x0001
+	...
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1941                	.insn	2, 0x1941
+   2:	0000                	.insn	2, 0x
+   4:	7200                	.insn	2, 0x7200
+   6:	7369                	.insn	2, 0x7369
+   8:	01007663          	bgeu	zero,a6,14 <loop+0x8>
+   c:	0000000f          	fence	unknown,unknown
+  10:	7205                	.insn	2, 0x7205
+  12:	3376                	.insn	2, 0x3376
+  14:	6932                	.insn	2, 0x6932
+  16:	7032                	.insn	2, 0x7032
+  18:	0031                	.insn	2, 0x0031
