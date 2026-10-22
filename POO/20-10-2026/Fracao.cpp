@@ -138,21 +138,38 @@ Fracao Fracao::multi(const Fracao f1, const Fracao f2) {
   return f3;
 }
 
-Fracao & Fracao::operator++() {
+Fracao& Fracao::operator++() {
   num = num + den;
-  return * this;
+  return *this;
 }
 
-// Fracao Fracao::operator++(int) {
-//   Fracao CopiaAntes(num, den);
-//   num = num + den;
-//   return CopiaAntes;
-// }
+Fracao& Fracao::operator--() {
+  num = num - den;
+  return *this;
+
+}
 
 bool Fracao::operator==(const Fracao& f) const {
   return (f.den == den && f.num == num);
 }
 
+bool Fracao::operator!=(const Fracao& f) const {
+  return (f.den ==! den || f.num != num);
+}
+
+
 bool Fracao::operator<(const Fracao& f) const {
-  return ((f.den / f.num) <  (den < num));
+  return ((num/den) < (f.num / f.den) );
+}
+
+bool Fracao::operator<=(const Fracao& f) const {
+  return ((num/den) <= (f.num / f.den));
+}
+
+bool Fracao::operator>(const Fracao& f) const {
+  return ((num/den) > (f.num / f.den));
+}
+
+bool Fracao::operator>=(const Fracao& f) const {
+  return ((num/den) >= (f.num / f.den));
 }
