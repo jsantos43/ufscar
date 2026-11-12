@@ -35,4 +35,4 @@ atraso:
 atraso_loop:
 	addi t4, t4, -1
 	bnez t4, atraso_loop
-	ret
+	jalr zero, 0(ra)	# volta para quem chamou (ret)

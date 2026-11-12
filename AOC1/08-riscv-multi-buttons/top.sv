@@ -18,7 +18,7 @@ module top (
   riscvmulti cpu(clk, reset, addr, writedata, memwrite, readdata);
 
   // memory
-  ram mem0(clk, memwrite & isRAM, addr, writedata, MEM_readdata);
+  mem #(.FILENAME("deslocador_fpga.hex")) ram(clk, memwrite & isRAM, addr, writedata, MEM_readdata);
 
   reg [9:0] leds = 0;
   always @(posedge clk)
@@ -28,22 +28,5 @@ module top (
   assign IO_readdata = addr[IO_KEY_bit] ? {31'b0, KEY} : 32'b0;
   assign readdata    = isIO ? IO_readdata : MEM_readdata;
 
-  // LEDs da placa (LEDR[5:0]) acendem em nivel baixo;
-  // LEDs externos (LEDR[9:6]) ligados do pino para o GND acendem em nivel alto
   assign LEDR = {leds[9:6], ~leds[5:0]};
-endmodule
-
-module ram (
-    input         clk, we,
-    input  [31:0] a, wd,
-    output [31:0] rd);
-
-  reg [31:0] RAM [0:255];
-
-  initial $readmemh("deslocador_fpga.hex", RAM);
-
-  assign rd = RAM[a[9:2]]; // word aligned
-
-  always @(posedge clk)
-    if (we) RAM[a[9:2]] <= wd;
 endmodule
