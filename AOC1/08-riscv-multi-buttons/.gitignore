@@ -1,0 +1,7 @@
+tests/*.out
+tests/tb*
+*.gabarito
+*.vcd
+deslocador/riscv.*
+deslocador/a.out
+build/

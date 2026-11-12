@@ -1,0 +1,49 @@
+// Constraints para Sipeed Tang Nano 20K (GW2AR-LV18QN88C8/I7)
+// Processador RISC-V multiciclo com E/S mapeada em memoria
+
+// ------------------------------------------------------------
+// Clock do sistema: cristal de 27 MHz
+// ------------------------------------------------------------
+IO_LOC  "clk" 4;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// ------------------------------------------------------------
+// Botoes (ativos em nivel ALTO: pressionado = 1)
+// S1 -> KEY[0] (entrada lida pelo programa em 0x0000_0110)
+// S2 -> reset  (reinicia o processador)
+// ------------------------------------------------------------
+IO_LOC  "KEY[0]" 88;
+IO_PORT "KEY[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+IO_LOC  "reset" 87;
+IO_PORT "reset" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+// ------------------------------------------------------------
+// LEDs (saida escrita pelo programa em 0x0000_0104)
+// LEDR[0]..LEDR[5]: LEDs da placa (ativos em nivel BAIXO)
+// ------------------------------------------------------------
+IO_LOC  "LEDR[0]" 15;
+IO_PORT "LEDR[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "LEDR[1]" 16;
+IO_PORT "LEDR[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "LEDR[2]" 17;
+IO_PORT "LEDR[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "LEDR[3]" 18;
+IO_PORT "LEDR[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "LEDR[4]" 19;
+IO_PORT "LEDR[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "LEDR[5]" 20;
+IO_PORT "LEDR[5]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+// ------------------------------------------------------------
+// LEDR[6]..LEDR[9]: a placa so tem 6 LEDs, entao estes saem
+// nos pinos livres do header (ligar LEDs externos com resistor)
+// ------------------------------------------------------------
+IO_LOC  "LEDR[6]" 25;
+IO_PORT "LEDR[6]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "LEDR[7]" 26;
+IO_PORT "LEDR[7]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "LEDR[8]" 27;
+IO_PORT "LEDR[8]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "LEDR[9]" 28;
+IO_PORT "LEDR[9]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
