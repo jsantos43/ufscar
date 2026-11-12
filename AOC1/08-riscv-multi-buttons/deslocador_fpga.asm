@@ -31,7 +31,7 @@ direita:
 
 # atraso de ~0,15 s a 27 MHz (cada volta: addi + bnez = 8 ciclos)
 atraso:
-	li t4, 500000
+	li t4, 980000
 atraso_loop:
 	addi t4, t4, -1
 	bnez t4, atraso_loop
