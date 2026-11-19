@@ -1,0 +1,43 @@
+
+riscv.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	10000513          	li	a0,256
+   4:	00050283          	lb	t0,0(a0)
+   8:	00150303          	lb	t1,1(a0)
+   c:	00250383          	lb	t2,2(a0)
+  10:	00350e03          	lb	t3,3(a0)
+  14:	01c50023          	sb	t3,0(a0)
+  18:	007500a3          	sb	t2,1(a0)
+  1c:	00650123          	sb	t1,2(a0)
+  20:	005501a3          	sb	t0,3(a0)
+  24:	00100073          	ebreak
+
+Disassembly of section .data:
+
+00000100 <frame_buffer>:
+ 100:	ff300c03          	lb	s8,-13(zero) # fffffff3 <frame_buffer+0xfffffef3>
+ 104:	333c                	.insn	2, 0x333c
+ 106:	aaaa000f          	.insn	4, 0xaaaa000f
+ 10a:	aaaa                	.insn	2, 0xaaaa
+ 10c:	333c                	.insn	2, 0x333c
+ 10e:	0c03000f          	.insn	4, 0x0c03000f
+ 112:	ff30                	.insn	2, 0xff30
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1941                	.insn	2, 0x1941
+   2:	0000                	.insn	2, 0x0000
+   4:	7200                	.insn	2, 0x7200
+   6:	7369                	.insn	2, 0x7369
+   8:	01007663          	bgeu	zero,a6,14 <_start+0x14>
+   c:	0000000f          	fence	unknown,unknown
+  10:	7205                	.insn	2, 0x7205
+  12:	3376                	.insn	2, 0x3376
+  14:	6932                	.insn	2, 0x6932
+  16:	7032                	.insn	2, 0x7032
+  18:	0031                	.insn	2, 0x0031
