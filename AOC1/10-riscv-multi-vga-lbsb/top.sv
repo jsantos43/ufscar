@@ -9,7 +9,8 @@ module top #(parameter VGA_BITS = 4) (
 
   wire VGA_DA; // In display area
   
-  wire memwrite, clk, reset;
+  wire memwrite, clk, reset, halt;
+  wire [ 3:0] writemask;
   wire [31:0] pc, instr;
   wire [31:0] writedata, addr, readdata;
   wire [31:0] vaddr, vdata;
@@ -32,10 +33,10 @@ module top #(parameter VGA_BITS = 4) (
   power_on_reset por(clk, reset);
     
   // microprocessor
-  riscvmulti cpu(clk, reset, addr, writedata, memwrite, readdata);
+  riscvmulti cpu(clk, reset, addr, writedata, memwrite, readdata, writemask, halt);
 
   // memory 
-  mem ram(clk, memwrite, addr, writedata, readdata, 'h200 + vaddr, vdata);
+  mem ram(clk, memwrite, addr, writedata, readdata, writemask, 'h200 + vaddr, vdata);
 
   // VGA controller
   vga gpu(VGA_CLK, reset, VGA_HS, VGA_VS, VGA_DA, vaddr);
